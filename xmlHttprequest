@@ -1,0 +1,26 @@
+function numberButton() {
+
+	//var XMLHttp = new GetXMLHttpObject();
+	var xmlhttp = new XMLHttpRequest();
+	//var params = "id=0";
+
+	xmlhttp = new ActiveXObject("MicrosoftXMLHTTP");
+
+	//XMLHttp.onreadystatechange = function (){
+		
+	///	if (XMLHttp.readyState == 4 && XMLHttp.status==200){
+
+	//		document.getElementById('number').innerText = XMLHttp.responseText;
+	//	}else {
+	//		document.getElementById('number').innerText = spinner;
+	//	}
+	//}; 
+	
+	// Make the real call from ajax 
+	
+	xmlhttp.open("POST","gui.php?params=1",true);
+	xmlttp.send();
+
+	X//MLHttp.senRequestHeader("Content-type","application/x-www-form-urlencoded");
+	//XMLHttp.send(params);
+}
