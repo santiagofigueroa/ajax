@@ -1,58 +1,17 @@
 
 <html>
-<head>
-<meta>
-<title>Html calculator</title>
-<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <head>
+        <title>Html calculator</title>  
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    </head>
+    <body bgcolor="blue">
 
-</head>
-<body bgcolor="grey">
+        <script>
 
-<script>
-
-var current_number = '';
-var previousNum = '';
-
-function numberButton(objButton){
-
-$.ajax(
-		type: "POST",
-		url: "gui.php",
-		data: currentNume: '', PreviousNum r: ,
-		contentType: "application/json; charset=utf-8",
-		dataType: "json",
-
-);
-		
-	}
 	
-</script>
+        </script>
 
-<h1 align="center" > AJAX Calculator GUI </h1>
-<center>
-Solution: <input type="textfield" id="display"  value="">
-<br>
-<button name = '1' type="submit" id="1" value="button"  onClick="numberButton(this)"> 1</button>
-<button name = '2' type="submit" id="2" value="button"  onClick="numberButton(this)"> 2</button>
-<button name = '3' type="submit" id="3" value="button"  onClick="numberButton(this)"> 3</button>
-<button name = '+' type="submit" id="+" value="button"  name ="+" onClick="addFunction()"> + </button>
-<br>
-<button name = '4' type="submit" id="4" value="button"  onClick="numberButton(this)"> 4</button>
-<button name = '5' type="submit" id="5" value="button"   onClick="numberButton(this)"> 5</button>
-<button name = '6' type="submit" id="6" value="button"   onClick="numberButton(this)"> 6</button>
-<button name = '-' type="submit" id="-" value="button"   onClick="subFunction()">- </button>
-<br>
-<button name = '7' type="submit" id="7" value="button"  onClick="numberButton(this)"> 7</button>
-<button name = '8' type="submit" id="8" value="button"   onClick="numberButton(this)"> 8</button>
-<button name = '9' type="submit" id="9" value="button"  onClick="numberButton(this)"> 9</button>
-<button name = 'x' type="submit" id="*" value="button 	 onClick="mulFunction()"> x </button>
-<br>
-<button name ='/' type="submit" id="/" value="button"  onClick="divFunction()"> / </button>
-<button type="button" id="0" value"button"  name ="0" onClick="numberButton(this)"> 0</button>
-<button type="reset"  id="reset" value="Reset" name="reset"> RC </button>
-<button type="button" value="=" onClick=" numberButton(this)"> =</button>
-</center>
-<div id = "result">    </div>
+        <div id = "result">   </div>
 
-</body>
+    </body>
 </html>
