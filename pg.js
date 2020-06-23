@@ -122,7 +122,7 @@ function MK2Array (cols ,row , objs){
     
     var  tmpArr = new Array(cols);
     var  arr  = [];
-    var arrIndex = 0; 
+    var arrIndex = 0; // To check if it was being implemented
     //for(var x in objs){
     objs.forEach(function(x){
         console.log("Winning Line: "); 
@@ -162,7 +162,7 @@ function filter(matrix){
     array =  JSON.parse(matrix);
     console.log(array);
 
-    var symbolMap = { "L1":5,"L4":8,"L3":7,"H1":1 };
+    var symbolMap = { "L1":5,"L2":6,"L4":8,"L3":7,"H1":1 };
     
     //var mLen  = array.length * array[j].length;
     console.log(symbolMap);
@@ -177,6 +177,10 @@ function filter(matrix){
             {
                 case "L1":
                 array[i][j] = symbolMap['L1'];
+                break;
+                    
+                case "L2":
+                array[i][j] = symbolMap['L2'];
                 break;
                  
                 case "L4":
