@@ -63,9 +63,13 @@
             // Added to one object 
             d.wLines = MK2Array(8,6,ObjDt.winningLines);
             
-            document.getElementById("obj").innerHTML = ObjDt.winningLines;
-            console.log(d.wLines);
-            
+            var endResult =  {"symbolMatrix":d.grid, "lineWins": d.wLines}; 
+            // To be more redable 
+            var strEndR = JSON.stringify(endResult,null,4);
+            console.log(strEndR);
+            document.getElementById("obj").innerHTML = ObjDt.winningLines.toString;
+            console.log(d);
+            document.getElementById("eResult").innerHTML = strEndR;
             var out = getOutput();
             console.log( "Output string : ");
             console.log(out);
@@ -85,9 +89,37 @@ function filterWinLines(data){
     
 }
 
+
+function symbl(str){
+    
+    var symbolMap = { "L1":5,"L4":8,"L3":7,"H1":1 };
+        
+            
+            switch (str) 
+            {
+                case "L1":
+                 return symbolMap['L1'];
+                break;
+                 
+                case "L4":
+                return symbolMap['L4']  
+                break;
+                  
+                case "L3":
+                return symbolMap['L3'] 
+                break;
+                
+                case "H1":
+                return  symbolMap['H1'] 
+                break;
+            }
+
+    
+    return 0; 
+}
+
 function MK2Array (cols ,row , objs){
     
-    console.log("2D array created: ");
     var  tmpArr = new Array(cols);
     var  arr  = [];
     var arrIndex = 0; 
@@ -100,7 +132,7 @@ function MK2Array (cols ,row , objs){
          tmpArr[0] = x.line;
          tmpArr[1] =  x.lineIndex;
          tmpArr[2] =  x.matchCount;
-         tmpArr[3] =  x.symbol;
+         tmpArr[3] =  symbl(x.symbol);
          tmpArr[4] =  x.win;
         
         console.log(tmpArr);
